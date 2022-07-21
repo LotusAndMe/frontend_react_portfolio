@@ -2,7 +2,9 @@ import React from 'react'
 import './Header.scss'
 import { motion } from 'framer-motion';
 import { images } from '../../constants';
-import {AppWrap} from './../../wrapper/';
+import { AppWrap } from './../../wrapper/';
+import { IntlProvider, FormattedMessage, FormattedDate } from 'react-intl';
+
 
 const scaleVariants = {
   whileInView:{
@@ -15,7 +17,29 @@ const scaleVariants = {
   }
 }
 
-const Header = () => {
+const message = {
+  en: {
+    hi: 'Hello I am',
+    name:'Andrew',
+    profession: 'WEB DEVELOPER',
+    company: 'FREELANCER',
+    
+  },
+  ua: {
+   hi: 'Привіт, мене звати',
+    name:'Андрій',
+    profession: 'ВЕБ РОЗРОБНИК',
+    company: 'вільний до найму',
+  },
+};
+
+const Header = ({ locale:localeImported }) => {
+  const locale = localeImported[0].locale;
+ 
+  console.log(locale)
+  console.log(`${message[locale].hi} `)
+
+
   return (
     <div className='app__header app__flex'>
 
@@ -29,15 +53,15 @@ const Header = () => {
           <div className="badge-cmp app__flex">
             <span>👋</span>
             <div style={{ marginLeft: 20 }}>
-              <p className='p-text'>Hello, I am</p>
-              <h1 className='head-text'>Andrew</h1>
+              <p className='p-text'>{`${message[locale].hi}`}</p>
+              <h1 className='head-text'>{message[locale].name }</h1>
             </div>
           </div>
 
 
           <div className="tag-cmp app__flex">
-            <p className="t-text">Web Developer</p>
-            <p className="t-text">Freelancer</p>
+            <p className="t-text">{message[locale].profession }</p>
+            <p className="t-text">{message[locale].company }</p>
           </div>
         </div>
       </motion.div>

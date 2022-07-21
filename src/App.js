@@ -11,10 +11,12 @@ const App = () => {
     setLocale(e.target.value);
   };
 
+  console.log(locale);
+
   return (
     <div className="app">
       <Navbar locale={locale} handleChange={handleChangeLocale} />
-      <Header />
+      <Header locale={locale} />
       <About />
       <Work />
       <Skills />

@@ -15,22 +15,26 @@ const message = {
   },
 };
 
-const Navbar = ({locale,handleChange}) => {
-  const [toggle, setToggle] = useState(false)
+const Navbar = ({ locale, handleChange }) => {
+  const [toggle, setToggle] = useState(false);
+  console.log(locale);
 
   
   return (
     <nav className='app__navbar'>
+
       <div className='app__navbar-logo'>
         <img src={images.logo} alt="logo" />
-         <select onChange={handleChange} defaultValue={locale}>
-        {['en', 'ua'].map((x) => (
-          <option key={x}>{x}</option>
-        ))}
-      </select>
+
+        <select onChange={handleChange} defaultValue={locale}>
+          {['en', 'ua'].map((x) => (
+            <option key={x}>{x}</option>
+          ))}
+        </select>
+        
       </div>
       <ul className='app__navbar-links'>
-        {message[locale].mainManu.map((item,index) => (
+        {message[locale].mainManu.map((item, index) => (
           <li key={`link-${item}`} className='app__flex p-text'>
             <div />
             <Link to={`${message.en.mainManu[index]}`} spy={true} smooth={true}>{item}</Link>
@@ -49,7 +53,7 @@ const Navbar = ({locale,handleChange}) => {
             <HiX onClick={() => setToggle(false)} />
 
             <ul >
-              {message[locale].mainManu.map((item,index) => (
+              {message[locale].mainManu.map((item, index) => (
                 <li key={item} >
                   <Link to={`${message.en.mainManu[index]}`} spy={true} smooth={true} onClick={() => setToggle(false)}>{item}</Link>
                 </li>
@@ -60,6 +64,6 @@ const Navbar = ({locale,handleChange}) => {
       </div>
     </nav>
   )
-}
+};
 
 export default Navbar
