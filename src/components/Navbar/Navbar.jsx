@@ -7,15 +7,19 @@ import { Link } from 'react-scroll'
 import Toggle from '../Toggle'
 import styled, { ThemeContext } from 'styled-components';
 import { Context } from '../../Store'
-import {NavWrap} from '../../wrapper/'
+import { NavWrap } from '../../wrapper/'
+import Tippy from '@tippyjs/react'
+import 'tippy.js/dist/tippy.css'
 
 
 const message = {
   en: {
-    mainManu: ['home', 'about', 'work', 'skills','testimonial', 'contact'],
+    mainManu: ['home', 'about', 'work', 'skills', 'testimonial', 'contact'],
+    language:'Change to other language',
   },
   ua: {
-    mainManu: ['домашня', 'про мене', 'роботи', 'навички','відгуки', 'звязок'],
+    mainManu: ['домашня', 'про мене', 'роботи', 'навички', 'відгуки', 'звязок'],
+    language:'Оберіть щоб змінити мову',
   },
 };
 
@@ -44,11 +48,14 @@ const Navbar = () => {
         <div className='app__navbar-logo'>
           <img src={images.logo} alt="logo" />
   
-          <select onChange={handleChange} defaultValue={state.locale[0]} >
-            {state.locale.map((x) => (
-              <option key={x}>{x}</option>
-            ))}
-          </select>
+          
+          <Tippy content={message[state.currentLocale].language}>
+            <select onChange={handleChange} defaultValue={state.locale[0]} >
+              {state.locale.map((x) => (
+                <option key={x}>{x}</option>
+              ))}
+            </select>
+          </Tippy>
 
           <Toggle isActive={id === 'dark'} onToggle={setTheme} state={ state} />
   
