@@ -1,7 +1,18 @@
 /** @format */
 
-import React from "react";
-import styled from "styled-components";
+import React,{useContext} from "react";
+import styled, { ThemeContext } from "styled-components";
+import Tippy from '@tippyjs/react'
+import 'tippy.js/dist/tippy.css'
+
+const message = {
+  en: {
+    toggle: 'Make Theme Dark',
+  },
+  ua: {
+    toggle: 'Перемкнути на Нічну Тему',
+  },
+};
 
 const ToggleWrapper = styled.div`
   width: 50px;
@@ -12,6 +23,11 @@ const ToggleWrapper = styled.div`
   margin: auto;
   display: flex;
 
+  p{
+    font-size: 0.65rem;
+    transition: transform 0.1s linear;
+    transform: translate(${(p) => (p.isActive ? "26px" : "1px")});
+  }
 `;
 
 const Notch = styled.div`
@@ -25,11 +41,18 @@ const Notch = styled.div`
   transform: translate(${(p) => (p.isActive ? "26px" : "1px")});
 `;
 
-const Toggle = ({ isActive, onToggle }) => {
+const Toggle = ({ isActive, onToggle, state }) => {
+  const { id, setTheme } = useContext(ThemeContext);
+  const locate = state.currentLocale;
+
+  console.log(state)
   return (
-    <ToggleWrapper onClick={onToggle}>
-      <Notch isActive={isActive} />
-    </ToggleWrapper>
+    <Tippy content={message[locate].toggle}>
+                       
+      <ToggleWrapper onClick={onToggle}>
+        <Notch isActive={isActive} />
+      </ToggleWrapper>
+    </Tippy>
   );
 };
 

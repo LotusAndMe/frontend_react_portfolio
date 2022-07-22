@@ -62,7 +62,8 @@ const HeaderWrap = styled.div`
   .app__header-badge .badge-cmp,
   .app__header-badge .tag-cmp {
     padding: 1rem 2rem;
-    border: var(--white-color);
+    border: ${(p) => p.theme.primaryColor};
+
     border-radius: 15px;
     flex-direction: row;
     width: auto;

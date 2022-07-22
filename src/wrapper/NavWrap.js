@@ -3,13 +3,20 @@
 import styled from "styled-components";
 
 const NavWrap = styled.nav`
+  select {
+    width: 50px;
+    height: 25px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
   .app__navbar {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: ${(p) => p.theme.primaryColor};
+    background: ${(p) => p.theme.navBgColor};
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -24,6 +31,7 @@ const NavWrap = styled.nav`
   .app__navbar-logo img {
     width: 75px;
     height: 75px;
+    box-shadow: 0 0 25px ${(p) => p.theme.primaryColor};
   }
   @media screen and (min-width: 2000px) {
     .app__navbar-logo img {
@@ -51,7 +59,7 @@ const NavWrap = styled.nav`
     margin-bottom: 5px;
   }
   .app__navbar-links li a {
-    color: ${(p) => p.theme.secondaryColor};
+    color: ${(p) => p.theme.linkColor};
     text-decoration: none;
     flex-direction: column;
     text-transform: uppercase;
@@ -59,10 +67,12 @@ const NavWrap = styled.nav`
     transition: all 0.3s ease-in-out;
   }
   .app__navbar-links li a:hover {
-    color: ${(p) => p.theme.secondaryColor};
+    color: ${(p) => p.theme.linkHoverColor};
+    text-shadow: 1px 1px 1px ${(p) => p.theme.linkHoverColor};
   }
   .app__navbar-links li:hover div {
-    background: ${(p) => p.theme.secondaryColor};
+    background: ${(p) => p.theme.navHoverColor};
+    /* primary */
   }
   @media screen and (max-width: 900px) {
     .app__navbar-links {
@@ -98,7 +108,7 @@ const NavWrap = styled.nav`
     align-items: flex-end;
     flex-direction: column;
     background: url("../../assets/bgWhite.webp");
-    background-color: ${(p) => p.theme.whiteColor};
+    background-color: ${(p) => p.theme.sideBgColor};
     background-size: cover;
     background-repeat: repeat;
     box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
@@ -106,7 +116,8 @@ const NavWrap = styled.nav`
   .app__navbar-menu div svg {
     width: 35px;
     height: 35px;
-    color: ${(p) => p.theme.primaryColor};
+    color: ${(p) => p.theme.linkHoverColor};
+    /* primary */
     margin: 0.5rem 1rem;
   }
   .app__navbar-menu div ul {
@@ -132,7 +143,7 @@ const NavWrap = styled.nav`
     transition: all 0.3s ease-in-out;
   }
   .app__navbar-menu div li a:hover {
-    color: ${(p) => p.theme.secondaryColor};
+    color: ${(p) => p.theme.linkHoverColor};
   }
   @media screen and (min-width: 900px) {
     .app__navbar-menu div {
