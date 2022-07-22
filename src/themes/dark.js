@@ -2,8 +2,13 @@
 
 const theme = {
   id: "dark",
-  primaryColor: "#91a9c5",
-  secondaryColor: "#5e6287",
+  primaryColor: "#acb0b5",
+  secondaryColor: "#ffffff",
+  blackColor: "#030303",
+  lightGrayColor: "#e4e4e4",
+  grayColor: "#6b7688",
+  brownColor: "46364a",
+  whiteColor: "#ffffff",
 };
 
 export default theme;

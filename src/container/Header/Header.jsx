@@ -33,12 +33,9 @@ const message = {
   },
 };
 
-const Header = ({ locale:localeImported }) => {
-  const locale = localeImported[0].locale;
+const Header = () => {
+  const locale = 'en';
  
-  console.log(locale)
-  console.log(`${message[locale].hi} `)
-
 
   return (
     <div className='app__header app__flex'>

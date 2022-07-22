@@ -21,9 +21,9 @@ const message = {
 };
 
 
-const About = ({ locale: localeImported }) => {
+const About = () => {
   // const locale = localeImported[0].locale;
-  console.log(localeImported)
+  // console.log(localeImported)
 
   const [abouts, setAbouts] = useState([]);
 
