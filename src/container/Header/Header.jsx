@@ -3,7 +3,7 @@ import './Header.scss'
 import { motion } from 'framer-motion';
 import { images } from '../../constants';
 import { AppWrap } from './../../wrapper/';
-import { IntlProvider, FormattedMessage, FormattedDate } from 'react-intl';
+
 
 
 const scaleVariants = {
