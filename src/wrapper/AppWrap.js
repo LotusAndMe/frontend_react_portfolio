@@ -23,8 +23,18 @@ const AppWrap = (Component, idName, classNames) =>
           <Component locale={locale} />
 
           <div className="copyright">
-            <p className="p-text">@2022 Andrew</p>
-            <p className="p-text">All rights reserved</p>
+            <p
+              className="p-text"
+              style={id === "light" ? { color: "black" } : { color: "white" }}
+            >
+              @2022 Andrew
+            </p>
+            <p
+              className="p-text"
+              style={id === "light" ? { color: "black" } : { color: "white" }}
+            >
+              All rights reserved
+            </p>
           </div>
         </div>
         <NavigationDots active={idName} />

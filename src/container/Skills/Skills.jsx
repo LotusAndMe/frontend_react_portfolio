@@ -5,7 +5,7 @@ import 'tippy.js/dist/tippy.css'
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
-import './Skills.scss';
+import {SkillsWrap} from './../../wrapper/';
 
 
 const Skills = () => {
@@ -26,7 +26,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <>
+    <SkillsWrap>
       <h2 className="head-text">Skills & Experiences</h2>
 
       <div className="app__skills-container">
@@ -81,7 +81,7 @@ const Skills = () => {
           ))}
         </div>
       </div>
-    </>
+    </SkillsWrap>
   );
 };
 
