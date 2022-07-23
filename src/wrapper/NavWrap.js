@@ -38,7 +38,7 @@ const NavWrap = styled.nav`
     border: 1px solid rgba(255, 255, 255, 0.18);
     position: fixed;
     z-index: 2;
-    opacity: 0.85;
+    opacity: 0.9;
   }
   .app__navbar-logo {
     display: flex;
@@ -49,7 +49,6 @@ const NavWrap = styled.nav`
     width: 75px;
     height: 75px;
     box-shadow: 0 0 25px ${(p) => p.theme.primaryColor};
-    opacity: 1;
   }
   @media screen and (min-width: 2000px) {
     .app__navbar-logo img {
@@ -106,6 +105,7 @@ const NavWrap = styled.nav`
     justify-content: center;
     align-items: center;
     background: ${(p) => p.theme.secondaryColor};
+    opacity: 1;
   }
   .app__navbar-menu svg {
     width: 70%;
@@ -119,18 +119,16 @@ const NavWrap = styled.nav`
     right: 0;
     z-index: 5;
     padding: 1rem;
-    width: 80%;
+    width: 40%;
     height: 100vh;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-    background: url("../assets/bgWhite.png");
     background-color: ${(p) => p.theme.sideBgColor};
     background-size: cover;
     background-repeat: repeat;
     box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
-    opacity: 1;
   }
   .app__navbar-menu div svg {
     width: 35px;
@@ -154,12 +152,13 @@ const NavWrap = styled.nav`
     margin: 1rem;
   }
   .app__navbar-menu div li a {
-    color: ${(p) => p.theme.whiteColor};
+    color: ${(p) => p.theme.linkColor};
     text-decoration: none;
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 500;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
   }
   .app__navbar-menu div li a:hover {
     color: ${(p) => p.theme.linkHoverColor};
