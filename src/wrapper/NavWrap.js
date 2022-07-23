@@ -8,11 +8,12 @@ const NavWrap = styled.nav`
     height: 25px;
     border-radius: 10px;
     text-align: center;
-    margin: 1rem 6rem;
+    margin-bottom: 1rem;
   }
   .myFeatures {
     display: flex;
     flex-direction: column;
+    margin-left: 2rem;
   }
 
   @media screen and (min-width: 900px) {
@@ -21,7 +22,7 @@ const NavWrap = styled.nav`
       flex-direction: row;
     }
     select {
-      margin: 0 2rem;
+      margin: 1rem;
     }
   }
 
@@ -124,11 +125,12 @@ const NavWrap = styled.nav`
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-    background: url("../../assets/bgWhite.png");
+    background: url("../assets/bgWhite.png");
     background-color: ${(p) => p.theme.sideBgColor};
     background-size: cover;
     background-repeat: repeat;
     box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+    opacity: 1;
   }
   .app__navbar-menu div svg {
     width: 35px;
@@ -152,7 +154,7 @@ const NavWrap = styled.nav`
     margin: 1rem;
   }
   .app__navbar-menu div li a {
-    color: ${(p) => p.theme.grayColor};
+    color: ${(p) => p.theme.whiteColor};
     text-decoration: none;
     font-size: 1rem;
     text-transform: uppercase;
