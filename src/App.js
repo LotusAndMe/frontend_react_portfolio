@@ -90,7 +90,7 @@ const AppWrapper = styled.div`
   .bold-text {
     font-size: 1rem;
     font-weight: 800;
-    color: var(--black-color);
+    color: ${(p) => p.theme.app__textp};
     text-align: left;
   }
   @media screen and (min-width: 2000px) {

@@ -20,7 +20,7 @@ const theme = {
   app__primarybg: "#e4e4e4",
   app__headtext: "#030303",
   app__headtextspan: "#313bac",
-  app__textp: "red",
+  app__textp: "#030303",
 };
 
 export default theme;

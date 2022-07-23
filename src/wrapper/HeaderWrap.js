@@ -4,6 +4,10 @@ import styled from "styled-components";
 import bgImage from "../assets/bgIMG.png";
 
 const HeaderWrap = styled.div`
+  .bold-text {
+    color: ${(p) => p.theme.app__whitebg};
+  }
+
   #home {
     position: relative;
     background: ${(p) => p.theme.sideBgColor};
