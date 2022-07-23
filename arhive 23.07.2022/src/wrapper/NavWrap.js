@@ -37,7 +37,6 @@ const NavWrap = styled.nav`
     border: 1px solid rgba(255, 255, 255, 0.18);
     position: fixed;
     z-index: 2;
-    opacity: 0.85;
   }
   .app__navbar-logo {
     display: flex;
@@ -48,7 +47,6 @@ const NavWrap = styled.nav`
     width: 75px;
     height: 75px;
     box-shadow: 0 0 25px ${(p) => p.theme.primaryColor};
-    opacity: 1;
   }
   @media screen and (min-width: 2000px) {
     .app__navbar-logo img {
@@ -124,7 +122,7 @@ const NavWrap = styled.nav`
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-    background: url("../../assets/bgWhite.png");
+    background: url("../../assets/bgWhite.webp");
     background-color: ${(p) => p.theme.sideBgColor};
     background-size: cover;
     background-repeat: repeat;
