@@ -64,7 +64,7 @@ const About = ({locale}) => {
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5, type: 'tween' }}
             className='app__profile-item'
-            key={about.title + index}
+            key={about + index}
           >
               <img src={urlFor(about.imgUrl)} alt={about.title} />
             <h2 className='bold-text' style={{ marginTop: 20 }}>{about[title]}</h2>

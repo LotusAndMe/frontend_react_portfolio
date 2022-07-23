@@ -36,7 +36,7 @@ const Skills = () => {
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
               className="app__skills-item app__flex"
-              key={skill[index]}
+              key={skill+index}
             >
               <div
                 className="app__flex"
@@ -52,7 +52,7 @@ const Skills = () => {
           {experiences.map((experience, index) => (
             <motion.div
               className="app__skills-exp-item"
-              key={experience.year[index]}
+              key={experience.year+index}
             >
               <div className="app__skills-exp-year">
                 <p className="bold-text">{experience.year}</p>
@@ -65,7 +65,7 @@ const Skills = () => {
                       className="app__skills-exp-work"
                       data-tip
                       data-for={work.name}
-                     key={work[index]}
+                     key={work+index}
                     >
                       <Tippy content={work.desc}>
                         <div>
