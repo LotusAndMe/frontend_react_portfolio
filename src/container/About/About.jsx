@@ -42,18 +42,25 @@ const About = ({locale}) => {
   useEffect(() => {
     const query = '*[_type=="abouts"]';
 
-    client.fetch(query).then((data) => setAbouts(data))
-
+    client.fetch(query).then((data) => setAbouts(data));
+       
   }, [])
 
-
+  console.log(abouts)
+  const title = `title${locale}`;
+  const description = `description${locale}`;
+  
+  console.log(title);
+  
   return (
+
     <AboutWrap>
       <h2 className='head-text'>{`${message[locale].headtext1}`} <span>{`${message[locale].headtext2}`}</span><br />{`${message[locale].headtext3} `} <span>{`${message[locale].headtext4}`}</span>
       </h2>
 
       <div className="app__profiles">
         {abouts.map((about, index) => (
+         
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
@@ -62,8 +69,8 @@ const About = ({locale}) => {
             key={about.title + index}
           >
               <img src={urlFor(about.imgUrl)} alt={about.title} />
-            <h2 className='bold-text' style={{ marginTop: 20 }}>{about.title}</h2>
-            <p className='p-text' style={{ marginTop: 10 }}>{about.description}</p>
+            <h2 className='bold-text' style={{ marginTop: 20 }}>{about[title]}</h2>
+            <p className='p-text' style={{ marginTop: 10 }}>{about[description]}</p>
           </motion.div>
         ))}
       </div>
