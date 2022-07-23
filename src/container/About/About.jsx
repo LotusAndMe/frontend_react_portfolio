@@ -41,12 +41,10 @@ const About = ({locale}) => {
 
   useEffect(() => {
     const query = '*[_type=="abouts"]';
-
     client.fetch(query).then((data) => setAbouts(data));
        
   }, [])
 
-  console.log(abouts)
   const title = `title${locale}`;
   const description = `description${locale}`;
   

@@ -3,14 +3,22 @@
 import React, { useContext } from "react";
 import { NavigationDots, SocialMedia } from "../components";
 import { Context } from "../Store";
+import { ThemeContext } from "styled-components";
 
 const AppWrap = (Component, idName, classNames) =>
   function HOC() {
     const [state, setState] = useContext(Context);
     const locale = state.currentLocale;
+    const { id, setTheme } = useContext(ThemeContext);
+    const bgColor = id === "light" ? "#e4e4e4" : "#030303";
+    console.log(bgColor);
 
     return (
-      <div id={idName} className={`app__container ${classNames}`}>
+      <div
+        id={idName}
+        className={`app__container ${classNames}`}
+        style={idName === "home" ? { background: bgColor } : {}}
+      >
         <SocialMedia />
         <div className="app__wrapper app__flex">
           <Component locale={locale} />

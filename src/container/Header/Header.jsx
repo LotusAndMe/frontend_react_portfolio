@@ -39,9 +39,10 @@ const message = {
 const Header = ({locale}) => {
 
 
+
   return (
 
-    <HeaderWrap>
+    <HeaderWrap >
       <div className='app__header app__flex'>
         <motion.div
           whileInView={{ x: [-100, 0], opacity: [0, 1] }}
@@ -52,7 +53,7 @@ const Header = ({locale}) => {
             <div className="badge-cmp app__flex">
               <span>👋</span>
               <div style={{ marginLeft: 20 }}>
-                <p className='p-text'>{`${message[locale].hi}`}</p>
+                <p className='p-text' >{`${message[locale].hi}`}</p>
                 <h1 className='head-text'>{message[locale].name }</h1>
               </div>
             </div>

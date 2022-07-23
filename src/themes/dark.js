@@ -15,7 +15,7 @@ const theme = {
   sideBgColor: "#404040",
   linkColor: "#e4e4e4",
   linkHoverColor: "#ffffff",
-  aboutCirclesColor: "#313bac",
+  aboutCirclesColor: "#e4e4e4",
   app__whitebg: "#6b7688",
   app__primarybg: "#030303",
   app__headtext: "#ffffff",

@@ -17,7 +17,7 @@ const AboutWrapper = styled.div`
   .app__profile-item {
     width: 190px;
     display: flex;
-    justify-content: flex-start7;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
     margin: 2rem;
