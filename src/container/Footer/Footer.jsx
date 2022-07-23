@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
-import './Footer.scss';
+
+import {FooterWrap} from '../../wrapper';
 
 const Footer = () => {
   const initialData = { name: '', email: '', message: '' };
@@ -39,7 +40,9 @@ const Footer = () => {
   };
 
   return (
-    <>
+    
+    <FooterWrap>
+      
       <h2 className="head-text">Take a coffee & chat with me</h2>
 
       <div className="app__footer-cards">
@@ -78,8 +81,9 @@ const Footer = () => {
             </h3>
             <button onClick={() => setIsFormSubmitted(false)} type='button' className='p-text'>Send one more message</button>
         </div>
-      )}
-    </>
+        )}
+    </FooterWrap>
+      
   );
 };
 

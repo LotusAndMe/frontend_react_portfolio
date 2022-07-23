@@ -9,3 +9,4 @@ export { default as AppWrapper } from "./AppWrapper";
 export { default as WorkWrap } from "./WorkWrap";
 export { default as SkillsWrap } from "./SkillsWrap";
 export { default as TestimonialWrap } from "./TestimonialWrap";
+export { default as FooterWrap } from "./FooterWrap";
