@@ -17,10 +17,10 @@ const AppWrapper = styled.div`
     font-family: var(--font-base);
   }
   .app__whitebg {
-    background-color: var(--white-color);
+    background-color: ${(p) => p.theme.app__whitebg};
   }
   .app__primarybg {
-    background-color: var(--primary-color);
+    background-color: ${(p) => p.theme.app__primarybg};
   }
   .app__container {
     width: 100%;
@@ -197,13 +197,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const App = () => {
-  // const [locale, setLocale] = useState("en");
   const [theme, setTheme] = useState(LightTheme);
-  // const handleChangeLocale = (e) => {
-  //   setLocale(e.target.value);
-  // };
-
-  // console.log(locale);
 
   return (
     <ThemeProvider

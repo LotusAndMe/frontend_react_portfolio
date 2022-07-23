@@ -1,11 +1,12 @@
 /** @format */
 
 import styled from "styled-components";
+import bgImage from "../assets/bgIMG.png";
 
 const HeaderWrap = styled.div`
   #home {
     position: relative;
-    background: url("../../assets/bgIMG.webp");
+    background: ${(p) => p.theme.sideBgColor};
     /* 
     background-size: cover;
     background-repeat: repeat;

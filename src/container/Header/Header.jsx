@@ -92,10 +92,10 @@ const Header = ({locale}) => {
   )
 }
 
-export default AppWrap(Header, 'home','app__darkbg');
+export default AppWrap(Header, 'home');
 
 // export default AppWrap(
 //   MotionWrap(Header,'app__header')
-//   , 'header',
-//   'app__darkbg'
+//   , 'home',
+//   'app__whitebg'
 // )

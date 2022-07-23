@@ -9,11 +9,15 @@ const theme = {
   grayColor: "#6b7688",
   brownColor: "#46364a",
   whiteColor: "#ffffff",
+
+  //
   navBgColor: "#edf2f8",
   sideBgColor: "#edf2f8",
   linkColor: "#313bac",
   linkHoverColor: "#030303",
   aboutCirclesColor: "#edf2f8",
+  app__whitebg: "#ffffff",
+  app__primarybg: "#e4e4e4",
 };
 
 export default theme;
