@@ -79,7 +79,7 @@ const AppWrapper = styled.div`
   .p-text {
     font-size: 0.8rem;
     text-align: left;
-    color: var(--gray-color);
+    color: ${(p) => p.theme.app__textp};
     line-height: 1.5;
   }
   @media screen and (min-width: 2000px) {
