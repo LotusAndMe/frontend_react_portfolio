@@ -56,6 +56,12 @@ const AppWrapper = styled.div`
   .head-text span {
     color: ${(p) => p.theme.app__headtextspan};
   }
+  #about .head-text {
+    color: black;
+  }
+  #skills .app__skills-exp-work .p-text {
+    color: black;
+  }
   @media screen and (min-width: 2000px) {
     .head-text {
       font-size: 4rem;

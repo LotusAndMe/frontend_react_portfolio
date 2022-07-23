@@ -5,13 +5,22 @@ import { AppWrap } from '../../wrapper'
 import { urlFor, client } from '../../client'
 import MotionWrap from './../../wrapper/MotionWrap';
 import {WorkWrap} from '../../wrapper'
+// import './Work.scss'
+import { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
+// import { Context } from './../../Store';
+
+
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState('All')
   const [animateCard, setanimateCard] = useState({ y: 0, opacity: 1 })
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
-  
+  const {id} = useContext(ThemeContext);
+  const h2_header = id === 'light' ? { color: "black" } : { color: 'white' }; 
+  console.log(id)
+
   useEffect(() => {
     const query = '*[_type == "works"]';
 
@@ -27,6 +36,7 @@ const Work = () => {
     setActiveFilter(item);
     setanimateCard([{ y: 100, opacity: 0 }])
     
+    
     setTimeout(() => {
       setanimateCard([{ y: 0, opacity: 1 }]);
 
@@ -40,8 +50,12 @@ const Work = () => {
 
 
   return (
+ 
     <WorkWrap>
-      <h2 className='head-text'>My Creative <span>Portfolio</span> Section</h2>
+      <>
+      
+        <h2 className='head-text' style={h2_header}>My Creative <span>Portfolio</span> Section</h2>
+        
       <div className="app__work-filter">
         {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (
           <div
@@ -103,8 +117,9 @@ const Work = () => {
           </div>
         ))}
       </motion.div>
-
-    </WorkWrap>
+</>
+      </WorkWrap>
+    
   )
 }
 

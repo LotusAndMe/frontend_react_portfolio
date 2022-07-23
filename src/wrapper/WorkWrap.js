@@ -8,10 +8,11 @@ const WorkWrap = styled.div`
     width: 100%;
     flex-direction: column;
   }
+
   .app__work-filter {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin: 4rem 0 2rem;
@@ -93,8 +94,8 @@ const WorkWrap = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
     bottom: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -112,7 +113,7 @@ const WorkWrap = styled.div`
     font-family: var(--font-base);
     font-weight: 800;
     cursor: pointer;
-    transform: all 0.3s ease;
+    transition: all 0.3s ease;
   }
   .app__work-hover div svg {
     width: 50%;
@@ -128,6 +129,11 @@ const WorkWrap = styled.div`
   .app__work-content h4 {
     margin-top: 1rem;
     line-height: 1.5;
+  }
+  @media screen and (min-width: 2000px) {
+    .app__work-content h4 {
+      margin-top: 3rem;
+    }
   }
   .app__work-content .app__work-tag {
     position: absolute;

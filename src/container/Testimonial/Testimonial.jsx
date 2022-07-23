@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
-import {TestimonialWrap} from '../../wrapper';
+// import {TestimonialWrap} from '../../wrapper';
+import './Testimonial.scss'
 
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,8 +32,6 @@ const Testimonial = () => {
   return (
    
     <>
-      <TestimonialWrap>
-
       
       {testimonials.length && (
         <>
@@ -69,9 +68,9 @@ const Testimonial = () => {
             <img src={urlFor(brand.imgUrl)} alt={brand.name} />
           </motion.div>
         ))}
-        </div>
-        </TestimonialWrap>
-        </>
+      </div>
+ 
+    </>
     
   );
 };
