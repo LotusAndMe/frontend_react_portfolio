@@ -45,7 +45,6 @@ const Toggle = ({ isActive, onToggle, state }) => {
   const { id, setTheme } = useContext(ThemeContext);
   const locate = state.currentLocale;
 
-  console.log(state)
   return (
     <Tippy content={message[locate].toggle}>
                        

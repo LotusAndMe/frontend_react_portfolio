@@ -1,31 +1,43 @@
 import React,{useState,useEffect} from 'react'
-import './About.scss' 
+
 import { motion } from 'framer-motion';
 import { urlFor, client } from '../../client';
 import { AppWrap , MotionWrap} from '../../wrapper';
 
+
+import {AboutWrap} from './../../wrapper/';
+
+
 const message = {
   en: {
-    hi: 'Hello I am',
-    name:'Andrew',
+    headtext1: 'I Know That',
+    headtext2: 'Good Dev',
+    headtext3: 'Means',
+    headtext4: 'Good Business',
+    secondmessage:'Andrew',
     profession: 'WEB DEVELOPER',
     company: 'FREELANCER',
     
   },
   ua: {
-   hi: 'Привіт, мене звати',
-    name:'Андрій',
+    headtext1: 'Я знаю що ',
+    headtext2: 'Гарна розробка',
+    headtext3: 'Означає',
+    headtext4: 'Гарний Бізнесс',
+   firstmessage: 'Я знаю що',
+    secondmessage:'Андрій',
     profession: 'ВЕБ РОЗРОБНИК',
     company: 'вільний до найму',
   },
 };
 
 
+
+
 const About = ({locale}) => {
-  // const locale = localeImported[0].locale;
-  // console.log(localeImported)
 
   const [abouts, setAbouts] = useState([]);
+
 
   useEffect(() => {
     const query = '*[_type=="abouts"]';
@@ -36,8 +48,8 @@ const About = ({locale}) => {
 
 
   return (
-    <>
-      <h2 className='head-text'>I Know That <span>Good Dev</span><br /> means <span>Good Business</span>
+    <AboutWrap>
+      <h2 className='head-text'>{`${message[locale].headtext1}`} <span>{`${message[locale].headtext2}`}</span><br />{`${message[locale].headtext3} `} <span>{`${message[locale].headtext4}`}</span>
       </h2>
 
       <div className="app__profiles">
@@ -55,7 +67,7 @@ const About = ({locale}) => {
           </motion.div>
         ))}
       </div>
-    </>
+    </AboutWrap>
   )
 }
 
