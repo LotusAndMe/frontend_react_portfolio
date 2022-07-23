@@ -1,15 +1,19 @@
 /** @format */
 
-import React from "react";
+import React, { useContext } from "react";
 import { NavigationDots, SocialMedia } from "../components";
+import { Context } from "../Store";
 
 const AppWrap = (Component, idName, classNames) =>
-  function HOC(...props) {
+  function HOC() {
+    const [state, setState] = useContext(Context);
+    const locale = state.currentLocale;
+
     return (
       <div id={idName} className={`app__container ${classNames}`}>
         <SocialMedia />
         <div className="app__wrapper app__flex">
-          <Component locale={props} />
+          <Component locale={locale} />
 
           <div className="copyright">
             <p className="p-text">@2022 Andrew</p>

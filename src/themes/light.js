@@ -13,6 +13,7 @@ const theme = {
   sideBgColor: "#edf2f8",
   linkColor: "#313bac",
   linkHoverColor: "#030303",
+  aboutCirclesColor: "#edf2f8",
 };
 
 export default theme;

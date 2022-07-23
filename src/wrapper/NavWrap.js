@@ -119,7 +119,7 @@ const NavWrap = styled.nav`
     right: 0;
     z-index: 5;
     padding: 1rem;
-    width: 40%;
+    width: 80%;
     height: 100vh;
     display: flex;
     justify-content: flex-end;
@@ -134,7 +134,6 @@ const NavWrap = styled.nav`
     width: 35px;
     height: 35px;
     color: ${(p) => p.theme.linkHoverColor};
-    /* primary */
     margin: 0.5rem 1rem;
   }
   .app__navbar-menu div ul {

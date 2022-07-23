@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import './About.scss'
+import './About.scss' 
 import { motion } from 'framer-motion';
 import { urlFor, client } from '../../client';
 import { AppWrap , MotionWrap} from '../../wrapper';
@@ -21,7 +21,7 @@ const message = {
 };
 
 
-const About = () => {
+const About = ({locale}) => {
   // const locale = localeImported[0].locale;
   // console.log(localeImported)
 

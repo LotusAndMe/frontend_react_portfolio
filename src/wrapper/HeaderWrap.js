@@ -5,10 +5,11 @@ import styled from "styled-components";
 const HeaderWrap = styled.div`
   #home {
     position: relative;
-    background: url("../../assets/bgIMG.png");
+    background: url("../../assets/bgIMG.webp");
+    /* 
     background-size: cover;
     background-repeat: repeat;
-    background-position: center;
+    background-position: center; */
   }
   #home .app__wrapper {
     padding: 0;
@@ -105,7 +106,7 @@ const HeaderWrap = styled.div`
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background: var(--white-color);
+    background: ${(p) => p.theme.aboutCirclesColor};
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
   .app__header-circles div img {
