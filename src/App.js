@@ -54,17 +54,17 @@ const AppWrapper = styled.div`
   }
   .copyright p {
     text-transform: uppercase;
-    color: var(--black-color);
+    color: ${(p) => p.theme.app__headtext};
   }
   .head-text {
     font-size: 2.75rem;
     font-weight: 800;
     text-align: center;
-    color: var(--black-color);
+    color: ${(p) => p.theme.app__headtext};
     text-transform: capitalize;
   }
   .head-text span {
-    color: var(--secondary-color);
+    color: ${(p) => p.theme.app__headtextspan};
   }
   @media screen and (min-width: 2000px) {
     .head-text {

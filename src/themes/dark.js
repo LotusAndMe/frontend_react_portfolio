@@ -18,6 +18,8 @@ const theme = {
   aboutCirclesColor: "#313bac",
   app__whitebg: "#6b7688",
   app__primarybg: "#030303",
+  app__headtext: "#ffffff",
+  app__headtextspan: "red",
 };
 
 export default theme;
