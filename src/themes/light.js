@@ -18,9 +18,10 @@ const theme = {
   aboutCirclesColor: "#edf2f8",
   app__whitebg: "#ffffff",
   app__primarybg: "#e4e4e4",
-  app__headtext: "#030303",
+  app__headtext: "black",
   app__headtextspan: "#313bac",
   app__textp: "#030303",
+  app__headerbadge: "#e4e4e4",
 };
 
 export default theme;

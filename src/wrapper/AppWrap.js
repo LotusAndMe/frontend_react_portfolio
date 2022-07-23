@@ -11,7 +11,6 @@ const AppWrap = (Component, idName, classNames) =>
     const locale = state.currentLocale;
     const { id, setTheme } = useContext(ThemeContext);
     const bgColor = id === "light" ? "#e4e4e4" : "#030303";
-    console.log(bgColor);
 
     return (
       <div

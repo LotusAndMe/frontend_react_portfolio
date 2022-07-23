@@ -4,9 +4,6 @@ import {HeaderWrap} from './../../wrapper/';
 import { motion } from 'framer-motion';
 import { images } from '../../constants';
 import { AppWrap } from './../../wrapper/';
-import MotionWrap from './../../wrapper/MotionWrap';
-
-
 
 
 const scaleVariants = {
@@ -95,8 +92,3 @@ const Header = ({locale}) => {
 
 export default AppWrap(Header, 'home');
 
-// export default AppWrap(
-//   MotionWrap(Header,'app__header')
-//   , 'home',
-//   'app__whitebg'
-// )

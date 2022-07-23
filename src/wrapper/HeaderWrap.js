@@ -69,6 +69,8 @@ const HeaderWrap = styled.div`
     flex-direction: row;
     width: auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: ${(p) => p.theme.app__headerbadge};
+    color: ${(p) => p.theme.app__textp};
   }
   .app__header-badge .tag-cmp {
     flex-direction: column;

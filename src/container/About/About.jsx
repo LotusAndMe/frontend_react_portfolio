@@ -48,7 +48,6 @@ const About = ({locale}) => {
   const title = `title${locale}`;
   const description = `description${locale}`;
   
-  console.log(title);
   
   return (
 
