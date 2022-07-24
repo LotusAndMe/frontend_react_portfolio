@@ -6,8 +6,35 @@ import { client } from '../../client';
 import './Footer.css';
 
 // import FooterWrap from './../../wrapper/FooterWrap';
+const messaget = {
+  en: {
+    message1: 'Take a coffee & chat with me',
+    message2: 'Mail me Now:',
+    message3: 'Phone me Now:',
+    message4: 'Your Name',
+    message5: 'Your Email',
+    message6: 'Your Message',
+    message7: 'Send Message',
+    message8: 'Sending...',
+    message9: 'Thank you for getting in touch!',
+    message10: 'Send one more message',
+  },
+  ua: {
+    message1: 'Візьміть чашку кави та зв`яжіться зі мною',
+    message2: 'Написати листа зараз:',
+    message3: 'Зателефонувати зараз:',
+    message4: 'Ваше ім`я',
+    message5: 'Ваше імейл',
+    message6: 'Ваше повідомлення',
+    message7: 'Надіслати повідомлення',
+    message8: 'Надсилаю...',
+    message9: 'Дякую, будемо на зв`язку!',
+    message10: 'Надіслати ще одне повідомлення',
+  },
+};
 
-const Footer = () => {
+const Footer = ({ locale }) => {
+  
   const initialData = { name: '', email: '', message: '' };
   const [formData, setFormData] = useState(initialData);
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
@@ -40,46 +67,47 @@ const Footer = () => {
     setFormData(initialData);
   };
 
+
   return (
 
     <>
-      <h2 className="head-text">Take a coffee & chat with me</h2>
+      <h2 className="head-text">{messaget[locale].message1}</h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card ">
           <img src={images.email} alt="email" />
-          <a href="mailto:myindexukrnet@gmail.com" className="p-text"><span style={{color:'black'}}>Mail me Now:</span> myindexukrnet@gmail.com</a>
+          <a href="mailto:myindexukrnet@gmail.com" className="p-text"><span style={{color:'black'}}>{messaget[locale].message2}</span> myindexukrnet@gmail.com</a>
         </div>
         <div className="app__footer-card">
           <img src={images.mobile} alt="phone" />
-          <a href="tel:+380634909557" className="p-text"><span style={{color:'black'}}>Phone me Now:</span> +380634909557</a>
+          <a href="tel:+380634909557" className="p-text"><span style={{color:'black'}}>{messaget[locale].message3}</span> +380634909557</a>
         </div>
       </div>
       {!isFormSubmitted ? (
         <div className="app__footer-form app__flex">
           <div className="app__flex">
-            <input className="p-text" type="text" placeholder="Your Name" name="username" value={username} onChange={handleChangeInput} />
+            <input className="p-text" type="text" placeholder={messaget[locale].message4} name="username" value={username} onChange={handleChangeInput} />
           </div>
           <div className="app__flex">
-            <input className="p-text" type="email" placeholder="Your Email" name="email" value={email} onChange={handleChangeInput} />
+            <input className="p-text" type="email" placeholder={messaget[locale].message5} name="email" value={email} onChange={handleChangeInput} />
           </div>
           <div>
             <textarea
               className="p-text"
-              placeholder="Your Message"
+              placeholder={messaget[locale].message6}
               value={message}
               name="message"
               onChange={handleChangeInput}
             />
           </div>
-          <button type="button" className="p-text" onClick={handleSubmit} style={{color:'white'}}>{!loading ? 'Send Message' : 'Sending...'}</button>
+          <button type="button" className="p-text" onClick={handleSubmit} style={{color:'white'}}>{!loading ? messaget[locale].message7 : messaget[locale].message8}</button>
         </div>
       ) : (
         <div className="app__footer-form app__flex">
           <h3 className="head-text">
-            Thank you for getting in touch!
+          {messaget[locale].message9}
             </h3>
-            <button onClick={() => setIsFormSubmitted(false)} type='button' className='p-text' style={{color:'white'}}>Send one more message</button>
+            <button onClick={() => setIsFormSubmitted(false)} type='button' className='p-text' style={{color:'white'}}>{messaget[locale].message10}</button>
         </div>
       )}
       </>

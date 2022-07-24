@@ -7,17 +7,31 @@ import MotionWrap from './../../wrapper/MotionWrap';
 import {WorkWrap} from '../../wrapper'
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
-// import { Context } from './../../Store';
+import { Context } from './../../Store';
 
 
+const message = {
+  en: {
+    message1: 'My Creative',
+    message2:'Portfolio',
+    message3: 'Section',
+    
+  },
+  ua: {
+    message1: 'Моє креативне',
+    message2:'Портфоліо',
+    message3: 'Розділ',
+  },
+};
 
-const Work = () => {
+const Work = ({locale}) => {
   const [activeFilter, setActiveFilter] = useState('All')
   const [animateCard, setanimateCard] = useState({ y: 0, opacity: 1 })
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
   const {id} = useContext(ThemeContext);
   const h2_header = id === 'light' ? { color: "black" } : { color: 'white' }; 
+  
  
 
   useEffect(() => {
@@ -52,7 +66,7 @@ const Work = () => {
  
     <WorkWrap>
       <>
-        <h2 className='head-text' style={h2_header}>My Creative <span>Portfolio</span> Section</h2>
+        <h2 className='head-text' style={h2_header}>{message[locale].message1} <span>{message[locale].message2}</span> { message[locale].message3}</h2>
         
       <div className="app__work-filter">
         {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (

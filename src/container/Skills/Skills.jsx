@@ -7,8 +7,16 @@ import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import {SkillsWrap} from './../../wrapper/';
 
+const message = {
+  en: {
+    message1: 'Skills And Experience',
+  },
+  ua: {
+    message1: 'Навички Та Досвід',
+  },
+};
 
-const Skills = () => {
+const Skills = ({locale}) => {
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
 
@@ -27,7 +35,7 @@ const Skills = () => {
 
   return (
     <SkillsWrap>
-      <h2 className="head-text">Skills & Experiences</h2>
+      <h2 className="head-text">{message[locale].message1}</h2>
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
