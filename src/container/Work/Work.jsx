@@ -31,7 +31,8 @@ const Work = ({locale}) => {
   const [filterWork, setFilterWork] = useState([]);
   const {id} = useContext(ThemeContext);
   const h2_header = id === 'light' ? { color: "black" } : { color: 'white' }; 
-  
+  const titlelang = `title${locale}`;
+  const descriptionlang = `description${locale}`;
  
 
   useEffect(() => {
@@ -119,8 +120,8 @@ const Work = ({locale}) => {
             </div>
 
             <div className="app__work-content app__flex">
-              <h4 className='bold-text'>{work.title}</h4>
-              <p className="p-text" style={{ marginTop: 10 }}>{ work.description }</p>
+              <h4 className='bold-text'>{work[titlelang]}</h4>
+              <p className="p-text" style={{ marginTop: 10 }}>{ work[descriptionlang] }</p>
               
               <div className="app__work-tag app__flex">
                 <p className='p-text'>{ work.tags[0] }</p>
