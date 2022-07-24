@@ -5,7 +5,6 @@ import { AppWrap } from '../../wrapper'
 import { urlFor, client } from '../../client'
 import MotionWrap from './../../wrapper/MotionWrap';
 import {WorkWrap} from '../../wrapper'
-// import './Work.scss'
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 // import { Context } from './../../Store';
@@ -19,7 +18,7 @@ const Work = () => {
   const [filterWork, setFilterWork] = useState([]);
   const {id} = useContext(ThemeContext);
   const h2_header = id === 'light' ? { color: "black" } : { color: 'white' }; 
-  console.log(id)
+ 
 
   useEffect(() => {
     const query = '*[_type == "works"]';
@@ -53,7 +52,6 @@ const Work = () => {
  
     <WorkWrap>
       <>
-      
         <h2 className='head-text' style={h2_header}>My Creative <span>Portfolio</span> Section</h2>
         
       <div className="app__work-filter">
