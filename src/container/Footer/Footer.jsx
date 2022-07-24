@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
-import './Footer.scss';
+import './Footer.css';
+
+// import FooterWrap from './../../wrapper/FooterWrap';
 
 const Footer = () => {
   const initialData = { name: '', email: '', message: '' };
@@ -39,6 +41,7 @@ const Footer = () => {
   };
 
   return (
+
     <>
       <h2 className="head-text">Take a coffee & chat with me</h2>
 
@@ -69,17 +72,18 @@ const Footer = () => {
               onChange={handleChangeInput}
             />
           </div>
-          <button type="button" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
+          <button type="button" className="p-text" onClick={handleSubmit} style={{color:'white'}}>{!loading ? 'Send Message' : 'Sending...'}</button>
         </div>
       ) : (
         <div className="app__footer-form app__flex">
           <h3 className="head-text">
             Thank you for getting in touch!
             </h3>
-            <button onClick={() => setIsFormSubmitted(false)} type='button' className='p-text'>Send one more message</button>
+            <button onClick={() => setIsFormSubmitted(false)} type='button' className='p-text' style={{color:'white'}}>Send one more message</button>
         </div>
       )}
-    </>
+      </>
+
   );
 };
 
