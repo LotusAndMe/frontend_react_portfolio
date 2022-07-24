@@ -7,10 +7,14 @@ import { urlFor, client } from '../../client';
 import {TestimonialWrap} from '../../wrapper';
 
 
-const Testimonial = () => {
+const Testimonial = ({locale}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [testimonials, setTestimonials] = useState([]);
   const [brands, setBrands] = useState([]);
+  const feedbacklang = `feedback${locale}`;
+  const namelang = `name${locale}`;
+  const companylang = `company${locale}`;
+
 
   const handleClick = (index) => {
     setCurrentIndex(index);
@@ -38,10 +42,10 @@ const Testimonial = () => {
           <div className="app__testimonial-item app__flex">
             <img src={urlFor(testimonials[currentIndex].imgurl)} alt={testimonials[currentIndex].name} />
             <div className="app__testimonial-content">
-              <p className="p-text">{testimonials[currentIndex].feedback}</p>
+              <p className="p-text">{testimonials[currentIndex][feedbacklang]}</p>
               <div>
-                <h4 className="bold-text">{testimonials[currentIndex].name}</h4>
-                <h5 className="p-text">{testimonials[currentIndex].company}</h5>
+                <h4 className="bold-text">{testimonials[currentIndex][namelang]}</h4>
+                <h5 className="p-text">{testimonials[currentIndex][companylang]}</h5>
               </div>
             </div>
           </div>
