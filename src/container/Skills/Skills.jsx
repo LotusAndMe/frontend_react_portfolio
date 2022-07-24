@@ -19,6 +19,9 @@ const message = {
 const Skills = ({locale}) => {
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
+  const desctitle = `desc${locale}`
+  const nametitle = `name${locale}`
+  const companytitle=`company${locale}`
 
   useEffect(() => {
     const query = '*[_type == "experiences"]';
@@ -75,10 +78,10 @@ const Skills = ({locale}) => {
                       data-for={work.name}
                      key={work+index}
                     >
-                      <Tippy content={work.desc}>
+                      <Tippy content={work[desctitle]}>
                         <div>
-                          <h4 className="bold-text">{work.name}</h4>
-                          <p className="p-text">{work.company}</p>
+                          <h4 className="bold-text">{work[companytitle]}</h4>
+                          <p className="p-text">{work[nametitle]}</p>
                         </div>
                       </Tippy>
                     </motion.div>
