@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { About, Footer, Header, Skills, Testimonial, Work } from "./container";
 import { Navbar } from "./components";
-// import "./App.scss";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import LightTheme from "./themes/light";
 import DarkTheme from "./themes/dark";
@@ -29,6 +28,7 @@ const GlobalStyle = createGlobalStyle`
   margin: 0;
   scroll-behavior: smooth;
 }
+
 `;
 
 const App = () => {

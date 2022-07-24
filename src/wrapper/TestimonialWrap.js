@@ -1,6 +1,7 @@
 /** @format */
 
 import styled from "styled-components";
+import { React } from "react";
 
 const TestimonialWrap = styled.div`
   .app__testimonial {
@@ -9,7 +10,7 @@ const TestimonialWrap = styled.div`
     flex-direction: column;
   }
   .app__testimonial-item {
-    width: 60%;
+    width: 100%;
     min-height: 320px;
     background-color: var(--white-color);
     display: flex;
@@ -18,6 +19,10 @@ const TestimonialWrap = styled.div`
     border-radius: 15px;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
+  }
+
+  #testimonial .app__testimonial-item {
+    background: black;
   }
   .app__testimonial-item img {
     width: 100px;
