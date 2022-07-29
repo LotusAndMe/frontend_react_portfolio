@@ -4,6 +4,48 @@
     flex-direction: column;
 }
 
+.app__social-footer{
+    display: none;
+}
+
+@media screen and (max-width:500px) {
+    .app__social-footer {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-direction: row;
+            padding: 1rem;
+            margin-top: 1.5rem;
+        }
+        .app__social-footer div {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--white-color);
+            margin: 0.25rem 1rem;
+            border: 1px solid var(--lightGray-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease-in-out;
+        }
+        .app__social-footer div svg {
+            width: 15px;
+            height: 15px;
+            color: var(--gray-color);
+        }
+        .app__social-footer div:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        .app__social-footer div:hover svg {
+            color: var(--white-color);
+        }
+       #contact .app__footer-cards {
+            margin: 2rem;
+        }
+}
+
 @media screen and (max-width: 768px) {
     .app__footer {
         flex-direction: column;
@@ -16,7 +58,7 @@
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    margin: 4em 2rem 2rem;
+    margin: 4em 2rem 2rem 2rem;
 }
 
 .app__footer-cards .app__footer-card {

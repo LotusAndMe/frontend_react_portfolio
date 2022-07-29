@@ -19,6 +19,7 @@ import redux from "../assets/redux.webp";
 import sass from "../assets/sass.webp";
 import typescript from "../assets/typescript.webp";
 import vue from "../assets/vue.webp";
+import sanity from "../assets/sanity.svg";
 
 import about01 from "../assets/about01.webp";
 import about02 from "../assets/about02.webp";
@@ -37,6 +38,7 @@ import nb from "../assets/nb.webp";
 import skype from "../assets/skype.webp";
 import spotify from "../assets/spotify.webp";
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   email,
   mobile,
@@ -71,4 +73,5 @@ export default {
   nb,
   skype,
   spotify,
+  sanity,
 };

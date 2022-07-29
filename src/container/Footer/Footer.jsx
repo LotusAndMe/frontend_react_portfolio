@@ -4,8 +4,8 @@ import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
 import './Footer.css';
+import {SocialMediaFooter} from './../../components/';
 
-// import FooterWrap from './../../wrapper/FooterWrap';
 const messaget = {
   en: {
     message1: 'Take a coffee & chat with me',
@@ -20,7 +20,7 @@ const messaget = {
     message10: 'Send one more message',
   },
   ua: {
-    message1: 'Візьміть чашку кави та зв`яжіться зі мною',
+    message1: "Візьміть чашку кави та звя'жіться зі мною",
     message2: 'Написати листа зараз:',
     message3: 'Зателефонувати зараз:',
     message4: 'Ваше ім`я',
@@ -73,6 +73,8 @@ const Footer = ({ locale }) => {
     <>
       <h2 className="head-text">{messaget[locale].message1}</h2>
 
+      <SocialMediaFooter/>
+      
       <div className="app__footer-cards">
         <div className="app__footer-card ">
           <img src={images.email} alt="email" />

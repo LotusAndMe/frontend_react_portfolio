@@ -3,9 +3,9 @@ import { BsLinkedin, BsInstagram, } from 'react-icons/bs'
 import {  FaFacebookF } from 'react-icons/fa'
 
 
-const SocialMedia = () => {
+const SocialMediaFooter = () => {
     return (
-        <div className='app__social'>
+        <div className='app__social-footer'>
             <div>
                 <a href="https://www.linkedin.com/in/andrii-okhrimenko-77b8991a0/" target='_blank' rel='noreferrer'>
                     <BsLinkedin />
@@ -25,4 +25,4 @@ const SocialMedia = () => {
     )
 }
 
-export default SocialMedia
+export default SocialMediaFooter
