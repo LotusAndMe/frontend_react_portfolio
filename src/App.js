@@ -32,7 +32,7 @@ const App = () => {
       <Store>
         <AppWrapper>
           <div className="app">
-            <Suspense fallback={<Spinner />}>
+            <Suspense fallback={<Spinner position="app" />}>
               <GlobalStyle />
               <Navbar />
               <Header />
