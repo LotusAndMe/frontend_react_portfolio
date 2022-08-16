@@ -18,3 +18,5 @@ const Store = ({ children }) => {
 };
 
 export default Store;
+
+// To update initial state we need to clear local storage in Browser
