@@ -42,7 +42,7 @@ const Notch = styled.div`
 `;
 
 const Toggle = ({ isActive, onToggle, state }) => {
-  const { id, setTheme } = useContext(ThemeContext);
+
   const locate = state.currentLocale;
 
   return (

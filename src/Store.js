@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import useLocalStorage from "./utils/useLocalStorage";
 
 const initialState = {
-  locale: ["en", "ua", "ru"],
+  locale: ["en", "ua"],
   currentLocale: "en",
 };
 
