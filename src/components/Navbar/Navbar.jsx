@@ -21,6 +21,7 @@ const message = {
     mainManu: ['домашня', 'про мене', 'роботи', 'навички', 'відгуки', 'звязок'],
     language:'Оберіть щоб змінити мову',
   },
+ 
 };
 
 
@@ -32,7 +33,6 @@ const Navbar = () => {
   const { id, setTheme } = useContext(ThemeContext);
   const [state, setState] = useContext(Context);
  
-
 
   const handleChange = (e) => {
     setState(prevState => {
@@ -52,7 +52,7 @@ const Navbar = () => {
           
           <div className="myFeatures">
             <Tippy content={message[state.currentLocale].language}>
-              <select onChange={handleChange} defaultValue={state.locale[0]} >
+              <select onChange={handleChange} defaultValue={state.currentLocale} >
                 {state.locale.map((x) => (
                   <option key={x}>{x}</option>
                 ))}
