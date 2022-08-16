@@ -16,9 +16,10 @@ import {
   Work,
   Skills,
 } from "./constants/lazy-loading";
+import useLocalStorage from "./utils/useLocalStorage";
 
 const App = () => {
-  const [theme, setTheme] = useState(LightTheme);
+  const [theme, setTheme] = useLocalStorage("theme", LightTheme);
 
   return (
     <ThemeProvider
