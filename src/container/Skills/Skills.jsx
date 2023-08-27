@@ -60,7 +60,9 @@ const Skills = ({locale}) => {
           ))}
         </motion.div>
         <div className="app__skills-exp">
-          {experiences.map((experience, index) => (
+          {experiences
+            .sort((a,b)=>a.year-b.year)
+            .map((experience, index) => (
             <motion.div
               className="app__skills-exp-item"
               key={experience.year+index}
@@ -69,7 +71,8 @@ const Skills = ({locale}) => {
                 <p className="bold-text">{experience.year}</p>
               </div>
               <motion.div className="app__skills-exp-works">
-                {experience.works.map((work,index) => (
+                {experience.works
+                  .map((work, index) => (
                     <motion.div
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
