@@ -31,7 +31,7 @@ const NavWrap = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.1rem 2rem;
     background: ${(p) => p.theme.navBgColor};
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);

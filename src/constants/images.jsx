@@ -15,6 +15,7 @@ import mu5 from "../assets/mu5.webp";
 import node from "../assets/node.webp";
 import python from "../assets/python.webp";
 import react from "../assets/react.webp";
+import next from "../assets/next.webp";
 import redux from "../assets/redux.webp";
 import sass from "../assets/sass.webp";
 import typescript from "../assets/typescript.webp";
@@ -38,6 +39,9 @@ import nb from "../assets/nb.webp";
 import skype from "../assets/skype.webp";
 import spotify from "../assets/spotify.webp";
 
+import sun from "../assets/sun.webp";
+import moon from "../assets/moon.webp";
+
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   email,
@@ -55,6 +59,7 @@ export default {
   node,
   python,
   react,
+  next,
   redux,
   sass,
   typescript,
@@ -74,4 +79,6 @@ export default {
   skype,
   spotify,
   sanity,
+  sun,
+  moon
 };

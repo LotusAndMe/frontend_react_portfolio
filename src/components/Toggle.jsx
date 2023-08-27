@@ -4,13 +4,14 @@ import React,{useContext} from "react";
 import styled, { ThemeContext } from "styled-components";
 import Tippy from '@tippyjs/react'
 import 'tippy.js/dist/tippy.css'
+import { images } from "../constants";
 
 const message = {
   en: {
-    toggle: 'Make Theme Dark',
+    toggle: 'Swap theme day/night',
   },
   ua: {
-    toggle: 'Перемкнути на Нічну Тему',
+    toggle: 'Перемкнути тему день/ніч',
   },
 };
 
@@ -28,19 +29,26 @@ const ToggleWrapper = styled.div`
     transition: transform 0.1s linear;
     transform: translate(${(p) => (p.isActive ? "26px" : "1px")});
   }
+
 `;
 
 const Notch = styled.div`
+  position: relative;
   height: 21px;
   width: 21px;
-  border: 1px solid #666;
-  margin-top: 1px;
-  background: white;
-  border-radius: 50%;
-  transition: transform 0.1s linear;
+  transition: transform 0.2s ease-in-out;
   transform: translate(${(p) => (p.isActive ? "26px" : "1px")});
-`;
 
+  img{
+    position: absolute;
+    top:1px;
+    left:-3px;
+    padding-top:-15px;
+    border-radius: 50%;
+  }
+  `;
+  
+  // background: ${p=> (p.isActive ? `red`: `blue`)};
 const Toggle = ({ isActive, onToggle, state }) => {
 
   const locate = state.currentLocale;
@@ -49,7 +57,11 @@ const Toggle = ({ isActive, onToggle, state }) => {
     <Tippy content={message[locate].toggle}>
                        
       <ToggleWrapper onClick={onToggle}>
-        <Notch isActive={isActive} />
+        <Notch isActive={isActive} >
+          {isActive ?
+            <img style={{ height: "22px", width: "22px" }} src={images.moon} alt="" /> :
+            <img style={{ top: '-1px', left: '0px', height: "22px", width: "22px" }} src={images.sun} alt="" />}
+        </Notch>
       </ToggleWrapper>
     </Tippy>
   );

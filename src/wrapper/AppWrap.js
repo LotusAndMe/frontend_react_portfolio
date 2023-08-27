@@ -27,7 +27,7 @@ const AppWrap = (Component, idName, classNames) =>
               className="p-text"
               style={id === "light" ? { color: "black" } : { color: "white" }}
             >
-              @2022 Andrew
+              @2023 Andrew
             </p>
             <p
               className="p-text"

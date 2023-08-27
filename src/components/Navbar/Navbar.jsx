@@ -58,7 +58,9 @@ const Navbar = () => {
                 ))}
               </select>
             </Tippy>
-            <Toggle isActive={id === 'dark'} onToggle={setTheme} state={ state} />
+            <Toggle isActive={id === 'dark'} onToggle={setTheme} state={state} />
+            
+            
           </div>
   
         </div>

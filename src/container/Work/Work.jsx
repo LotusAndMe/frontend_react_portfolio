@@ -28,12 +28,13 @@ const Work = ({locale}) => {
   const [activeFilter, setActiveFilter] = useState('All')
   const [animateCard, setanimateCard] = useState({ y: 0, opacity: 1 })
   const [works, setWorks] = useState([]);
+  const [tags, setTags] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
   const {id} = useContext(ThemeContext);
   const h2_header = id === 'light' ? { color: "black" } : { color: 'white' }; 
   const titlelang = `title${locale}`;
   const descriptionlang = `description${locale}`;
- 
+  const tagsLocal = ['UI/UX', 'Web App', 'Mobile App', 'React JS','Next JS 13', 'All']
 
   useEffect(() => {
     const query = '*[_type == "works"]';
@@ -43,8 +44,18 @@ const Work = ({locale}) => {
       setFilterWork(data);
 
     })
-    
-  },[])
+  }, [])
+  
+  
+  useEffect(() => {
+    const query = '*[_type == "tags"]';
+
+    client.fetch(query).then((data) => {
+      const tagsF = Object.values(data).map(tag=>tag.name)
+      console.log(tagsF)
+      setTags(tagsF.sort());
+    })
+   },[])
 
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
@@ -63,6 +74,7 @@ const Work = ({locale}) => {
   }
 
 
+  console.log(tags)
   return (
  
     <WorkWrap>
@@ -70,7 +82,7 @@ const Work = ({locale}) => {
         <h2 className='head-text' style={h2_header}>{message[locale].message1} <span>{message[locale].message2}</span> { message[locale].message3}</h2>
         
       <div className="app__work-filter">
-        {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (
+        {tags.map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
