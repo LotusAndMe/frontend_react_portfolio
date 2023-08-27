@@ -38,6 +38,7 @@ const Notch = styled.div`
   width: 21px;
   transition: transform 0.2s ease-in-out;
   transform: translate(${(p) => (p.isActive ? "26px" : "1px")});
+  border-radius: 50%;
 
   img{
     position: absolute;
@@ -45,6 +46,9 @@ const Notch = styled.div`
     left:-3px;
     padding-top:-15px;
     border-radius: 50%;
+  }
+  :hover{
+    background-color: white;
   }
   `;
   

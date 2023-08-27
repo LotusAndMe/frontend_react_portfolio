@@ -61,6 +61,7 @@ const AppWrapper = styled.div`
   }
   #skills .app__skills-exp-work .p-text {
     color: black;
+    font-size:2rem;
   }
   @media screen and (min-width: 2000px) {
     .head-text {
@@ -73,7 +74,7 @@ const AppWrapper = styled.div`
     }
   }
   .p-text {
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-align: left;
     color: ${(p) => p.theme.app__textp};
     line-height: 1.5;

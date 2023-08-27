@@ -80,7 +80,8 @@ const NavWrap = styled.nav`
     text-decoration: none;
     flex-direction: column;
     text-transform: uppercase;
-    font-weight: 500;
+    font-size:1.2rem;
+    font-weight: 600;
     transition: all 0.3s ease-in-out;
   }
   .app__navbar-links li a:hover {
